@@ -37,12 +37,36 @@
 
 
 
-using CalculatorProject;
+//using CalculatorProject;
+
+//[TestClass]
+//public class CalculatorProjectTests
+//{
+//    public TestContext TestContext { get; set; }
+
+//    [TestMethod]
+//    public void CalculatorProjectAdd_2_4_returns_6()
+//    {
+//        // Initialize x and y with default values
+//        int x = 2; // Assigning value 2 to x
+//        int y = 4; // Assigning value 4 to y
+
+//        // Instantiate the calculator
+//        Calculator c = new Calculator();
+//        int result = c.Add(x, y);
+
+//        // Assert that the result is as expected
+//        Assert.AreEqual(6, result, "The expected result should be 6 based on the test method's name");
+//    }
+//}
+
+
+
 
 [TestClass]
 public class CalculatorProjectTests
 {
-    public TestContext TestContext { get; set; }
+    public TestContext? TestContext { get; set; } // Make TestContext nullable
 
     [TestMethod]
     public void CalculatorProjectAdd_2_4_returns_6()
@@ -51,7 +75,6 @@ public class CalculatorProjectTests
         int x = 2; // Assigning value 2 to x
         int y = 4; // Assigning value 4 to y
 
-        // Instantiate the calculator
         Calculator c = new Calculator();
         int result = c.Add(x, y);
 
@@ -59,3 +82,5 @@ public class CalculatorProjectTests
         Assert.AreEqual(6, result, "The expected result should be 6 based on the test method's name");
     }
 }
+
+
